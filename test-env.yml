@@ -1,0 +1,13 @@
+version: '2.4'
+services:
+
+  cassandra:
+    image: cassandra:3.11.4
+    command: 'sh /init/init.sh'
+    container_name: cassandra
+    environment:
+      JVM_OPTS: -Xms1g -Xmx1g
+    volumes:
+    - ./test/cassandra:/init:ro
+    mem_limit: 2g
+    network_mode: host

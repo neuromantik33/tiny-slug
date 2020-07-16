@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    main(class="container")
+        div(class="jumbotron")
+            div(class="row")
+                div(class="col-md-12 align-self-center")
+                    h1(class="text-center") Shorten your URL into a slug
+                    label(for="url") URL
+                    div(class="input-group")
+                        input.form-control(type="text", id="url", role="url", aria-label="slug")
+                        div(class="input-group-append")
+                            button(class="btn btn-md btn-danger", id="btn-short", role="button", aria-label="Slug") Slug it!
+
+            div(class="row")
+                div(class="col-md-12")
+                    div(class="alert alert-danger invisible mt-3", id="url-alert", role="alert")
+                        span(id="url-alert-text") Shortened URL
+
+    footer(class="footer")
+        div(class="container")
+            span(class="text-muted") © Ecole 42
+
+    script(src="/js/app.js")

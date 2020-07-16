@@ -1,0 +1,29 @@
+{
+  "name": "tiny-slug",
+  "version": "0.0.1",
+  "description": "Yet another url shortener",
+  "private": true,
+  "scripts": {
+    "start": "NODE_ENV=production node ./bin/www",
+    "dev": "DEBUG=tiny-slug:* nodemon ./bin/www",
+    "test": "mocha --exit"
+  },
+  "author": "Nicolas Estrada",
+  "license": "MIT",
+  "dependencies": {
+    "base62": "^2.0.1",
+    "cassandra-driver": "^4.5.2",
+    "cookie-parser": "^1.4.5",
+    "debug": "^2.6.9",
+    "express": "^4.16.4",
+    "http-errors": "^1.6.3",
+    "morgan": "^1.9.1",
+    "pug": "^2.0.0-beta11"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^8.0.1",
+    "nodemon": "^2.0.4"
+  }
+}
